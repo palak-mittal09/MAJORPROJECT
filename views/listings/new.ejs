@@ -1,0 +1,260 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container mt-5">
+  <h2 class="mb-4">Create a New Listing</h2>
+
+  <form action="/listings" method="POST" class="card p-4 shadow rounded " novalidate>
+
+    <div class="mb-3">
+      <label for="title">Title</label>
+      <input 
+        type="text" 
+        name="listing[title]" 
+        placeholder="Enter title"
+        class="form-control" 
+        required 
+      >
+      <div class="valid-feedback">looks good!</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="description">Description</label>
+      <textarea 
+        name="listing[description]"  
+        class="form-control" 
+        placeholder="Enter description"
+        required
+      ></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="image">Image URL</label>
+      <input  
+        type="text"  
+        name="listing[image]" 
+        class="form-control" 
+        placeholder="https://example.com/image.jpg"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="price">Price</label>
+      <input 
+        type="number" 
+        name="listing[price]" 
+        class="form-control" 
+        placeholder="12000"
+        required
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="country">Country</label>
+      <input 
+        type="text" 
+        name="listing[country]"
+        id="country" 
+        class="form-control" 
+        placeholder="India"
+        required
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="location">Location</label>
+      <input 
+        type="text" 
+        name="listing[location]" 
+        id="location" 
+        class="form-control" 
+        placeholder="Punjab, Gujarat"
+        required
+      >
+    </div>
+
+    <button type="submit" class="btn btn-danger w-100">ADD</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    % layout("/layouts/boilerplate") %>
+
+<div class="container mt-5">
+  <h2 class="mb-4">Create a New Listing</h2>
+
+  <form action="/listings" method="POST" class="card p-4 shadow rounded needs-validation" novalidate>
+
+    <div class="mb-3">
+      <label for="title">Title</label>
+      <input 
+      type="text" 
+      name="listing[title]"
+      req 
+      id="title" 
+      class="form-control" 
+      placeholder="Enter title" 
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="description">Description</label>
+      <textarea 
+      name="listing[description]" 
+      id="description" 
+      class="form-control" 
+      placeholder="Enter description"
+      required
+      >
+     </textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="image">Image URL</label>
+      <input  
+      type="text"  
+      name="listing[image]" 
+      id="image" 
+      class="form-control" 
+      placeholder="https://example.com/image.jpg">
+    </div>
+
+    <div class="mb-3">
+      <label for="price">Price</label>
+      <input 
+      type="number" 
+      name="listing[price]" 
+      id="price" 
+      class="form-control" 
+      placeholder="12000"
+      required
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="country">Country</label>
+      <input 
+      type="text" 
+      name="listing[country]"
+      id="country" 
+      class="form-control" 
+      placeholder="India"
+      required>
+    </div>
+
+    <div class="mb-3">
+      <label for="location">Location</label>
+      <input 
+      type="text" 
+      name="listing[location]" 
+      id="location" 
+      class="form-control" 
+      placeholder="Punjab, Gujarat"
+      required>
+    </div>
+
+    <button type="submit" class="btn btn-danger w-100">ADD</button>
+  </form>
+</div> -->
+
+    <!-- % layout("/layouts/boilerplate") %>
+
+
+    <h2>Create a New Listing</h2>
+
+    <br>
+<form action="/listings" method="POST">
+    <label>Title:</label>
+    <input type="text" name="listing[title]" required placeholder="Add a catchy title">
+    
+    <label>Description:</label>
+    <textarea name="listing[description]"></textarea>
+
+    <label>Price:</label>
+    <input type="number" name="listing[price]" placeholder="12,000">
+
+    <label>Location:</label>
+    <input type="text" name="listing[location]" placeholder="Punjab , Gujrat">
+
+    <label>Country:</label>
+    <input type="text" name="listing[country]" placeholder="India">
+
+    <label>Image URL:</label>
+    <input type="text" name="listing[image]">
+    <br><br><br>
+
+    <button type="submit">Create Listing</button>
+    <br>
+</form> -->
+
+<!-- 
+<body>
+    <h3>Listing Details : </h3>
+    <ul>
+        <li><</li>
+        <li><></li>
+        <li> &#8377; isting.price.toLocaleString("en-IN") %></li>
+        <li>= listing.location %></li>
+        <li>%= listing.country %></li>
+    </ul>
+    <img src="%= listing.image %>" alt="Listing Image" style="max-width:300px;">
+    <br>
+    <a href="/listings/%= listing._id %>/edit"> Edit this Listing</a>
+    <br><br><br>
+    <form action="/listings/%= listing._id %>?_method=DELETE" method="POST">
+        <button>DELETE THIS LISTING</button>
+    </form>
+</body>
+    <div class="container mt-5">
+  <h2 class="mb-4">Create a New Listing</h2>
+
+  <form action="/listings" method="POST" class="card p-4 shadow rounded">
+
+    <div class="mb-3">
+      <input type="text" name="listing[title]" class="form-control" placeholder="Enter title" required>
+    </div>
+
+    <div class="mb-3">
+      <textarea name="listing[description]" class="form-control" placeholder="Enter description"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <input type="text" name="listing[image]" class="form-control" placeholder="Enter image URL/Link">
+    </div>
+
+    <div class="mb-3">
+      <input type="number" name="listing[price]" class="form-control" placeholder="Enter price">
+    </div>
+
+    <div class="mb-3">
+      <input type="text" name="listing[country]" class="form-control" placeholder="Enter country">
+    </div>
+
+    <div class="mb-3">
+      <input type="text" name="listing[location]" class="form-control" placeholder="Enter location">
+    </div>
+
+    <button type="submit" class="btn btn-danger w-100">Add</button>
+  </form>
+</div> -->
+
+    
+<!-- </body>
+</html> -->
